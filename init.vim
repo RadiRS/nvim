@@ -31,7 +31,9 @@ Plug 'akinsho/dependency-assist.nvim'
 Plug 'yuezk/vim-js'
 Plug 'meain/vim-package-info', { 'do': 'npm install' }
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'epilande/vim-react-snippets'
+Plug 'rafamadriz/friendly-snippets'
+"Plug 'epilande/vim-react-snippets'
+"Plug 'mlaursen/vim-react-snippets'
 
 " Dart Development
 Plug 'dart-lang/dart-vim-plugin'
@@ -94,7 +96,7 @@ noremap <S-Tab> gt
 nnoremap <leader>s :w<CR>
 nnoremap <C-M> :wq<CR>
 nnoremap <leader>q :q<CR>
-:inoremap <expr> <Tab> search('\%#[]>)}''""]', 'n') ? '<Right>' : '<Tab>'
+inoremap <expr> <Tab> search('\%#[]>)}''""]', 'n') ? '<Right>' : '<Tab>'
 
 "---------------------------------------
 
@@ -138,16 +140,45 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-\ pumvisible() ? "\<C-n>" :
-\ <SID>check_back_space() ? "\<TAB>" :
-\ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+"inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+"inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
-function! s:check_back_space() abort
-let col = col('.') - 1
-return !col || getline('.')[col - 1] =~# '\s'
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+"inoremap <silent><expr> <TAB>
+      "\ coc#pum#visible() ? coc#_select_confirm() :
+      "\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      "\ CheckBackSpace() ? "\<TAB>" :
+      "\ coc#refresh()
+
+"function! CheckBackSpace() abort
+  "let col = col('.') - 1
+  "return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+
+"let g:coc_snippet_next = '<tab>'
+
+"inoremap <silent><expr> <TAB>
+"\ pumvisible() ? "\<C-n>" :
+"\ <SID>check_back_space() ? "\<TAB>" :
+"\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+"function! s:check_back_space() abort
+"let col = col('.') - 1
+"return !col || getline('.')[col - 1] =~# '\s'
+"endfunction
+"inoremap <expr> <cr> pumvisible() ? "\<C-Y>" : "\<CR>"
+
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -248,7 +279,8 @@ nnoremap <leader>fa :CocCommand flutter.run <CR>
 nnoremap <leader>fA :CocCommand flutter.run -d all<CR>
 nnoremap <leader>fq :CocCommand flutter.dev.quit <CR>
 nnoremap <leader>fe :CocCommand flutter.emulators <CR>
-nnoremap <leader>fd :below new output:///flutter-dev <CR>
+"nnoremap <leader>fd :below new output:///flutter-dev <CR>
+nnoremap <leader>fd :CocCommand flutter.dev.openDevLog <CR>
 
 let g:dart_format_on_save = 1
 "let g:dart_style_guide = 2
