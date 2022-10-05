@@ -10,7 +10,8 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Files Finder
-Plug 'scrooloose/nerdtree'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'nvim-lua/popup.nvim'
