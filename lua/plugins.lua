@@ -22,10 +22,12 @@ packer.startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  }
+  } -- Code highlighting
   use 'windwp/nvim-autopairs' -- Autopairs
   use 'windwp/nvim-ts-autotag' -- Autotag
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'nvim-telescope/telescope.nvim' -- Fuzzy finder
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
+  --use 'ryanoasis/vim-devicons' -- File icons
+  use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
 end)
