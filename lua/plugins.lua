@@ -23,6 +23,9 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs' -- Autopairs
+  use 'windwp/nvim-ts-autotag' -- Autotag
+  use 'nvim-lua/plenary.nvim' -- Common utilities
+  use 'nvim-telescope/telescope.nvim' -- Fuzzy finder
+  use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
 end)

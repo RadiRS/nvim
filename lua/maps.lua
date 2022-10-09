@@ -36,6 +36,7 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Close window
 keymap.set('n', '<leader>q', ':q<Return>')
+keymap.set('n', '<leader>Q', ':q!<Return>')
 keymap.set('n', '<C-m>', ':wq<Return>')
 
 -- Text Editor
