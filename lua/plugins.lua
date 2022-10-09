@@ -33,4 +33,6 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
   use 'akinsho/nvim-bufferline.lua' -- Tabs bufferline
   use 'norcalli/nvim-colorizer.lua' -- Colorizer
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 end)
