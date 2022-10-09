@@ -30,4 +30,5 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
   --use 'ryanoasis/vim-devicons' -- File icons
   use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
+  use 'akinsho/nvim-bufferline.lua' -- Tabs bufferline
 end)

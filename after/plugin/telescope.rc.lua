@@ -46,7 +46,7 @@ local opts = { noremap = true, silent = true }
 -- Keymaps
 
 vim.keymap.set(
-  'n', ';f', '<cmd> lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<cr>',
+  'n', ';f', '<cmd> lua require("telescope.builtin").find_files({ no_ignore = false })<cr>',
   opts
 )
 vim.keymap.set(
