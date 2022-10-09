@@ -15,6 +15,7 @@ packer.startup(function(use)
   } -- Status Line
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- VsCode-like pictograms
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's build-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
@@ -28,7 +29,8 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'nvim-telescope/telescope.nvim' -- Fuzzy finder
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
-  --use 'ryanoasis/vim-devicons' -- File icons
+  use 'ryanoasis/vim-devicons' -- File icons
   use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
   use 'akinsho/nvim-bufferline.lua' -- Tabs bufferline
+  use 'norcalli/nvim-colorizer.lua' -- Colorizer
 end)
