@@ -37,4 +37,5 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'tpope/vim-surround' -- Surrounding utilities for work with brackets, tags and more
   use 'lewis6991/gitsigns.nvim' -- Fast git decorations implemented purely in lua/teal
+  use 'dinhhuy258/git.nvim' -- For git blame & browser
 end)
