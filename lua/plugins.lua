@@ -46,4 +46,6 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- Fast git decorations implemented purely in lua/teal
   use 'dinhhuy258/git.nvim' -- For git blame & browser
 
+  use 'numToStr/Comment.nvim' -- Commenting with gc
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting jsx
 end)
