@@ -1,7 +1,10 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
+local statuscmp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if (not statuscmp) then return end
 
 local protocal = require('vim.lsp.protocol')
+local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function(client, bufnr)
   -- format on save
@@ -41,4 +44,22 @@ nvim_lsp.sumneko_lua.setup {
       }
     }
   }
+}
+
+-- HTML
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+-- CSS
+nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+-- JSON
+nvim_lsp.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
 }

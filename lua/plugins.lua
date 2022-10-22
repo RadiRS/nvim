@@ -13,6 +13,7 @@ packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   } -- Status Line
+
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- VsCode-like pictograms
   use 'glepnir/lspsaga.nvim' -- LSP UIs
@@ -20,6 +21,9 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's build-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'L3MON4D3/LuaSnip' -- Snippet
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -27,15 +31,19 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs' -- Autopairs
   use 'windwp/nvim-ts-autotag' -- Autotag
   use 'nvim-lua/plenary.nvim' -- Common utilities
+
   use 'nvim-telescope/telescope.nvim' -- Fuzzy finder
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
   use 'ryanoasis/vim-devicons' -- File icons
   use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
   use 'akinsho/nvim-bufferline.lua' -- Tabs bufferline
   use 'norcalli/nvim-colorizer.lua' -- Colorizer
+
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'tpope/vim-surround' -- Surrounding utilities for work with brackets, tags and more
+
   use 'lewis6991/gitsigns.nvim' -- Fast git decorations implemented purely in lua/teal
   use 'dinhhuy258/git.nvim' -- For git blame & browser
+
 end)
