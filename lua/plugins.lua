@@ -48,4 +48,6 @@ packer.startup(function(use)
 
   use 'numToStr/Comment.nvim' -- Commenting with gc
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting jsx
+
+  use 'terryma/vim-multiple-cursors' -- Multiple select and edit
 end)
