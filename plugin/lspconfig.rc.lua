@@ -4,7 +4,7 @@ local statuscmp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if (not statuscmp) then return end
 
 local protocal = require('vim.lsp.protocol')
-local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 local on_attach = function(client, bufnr)
   -- format on save

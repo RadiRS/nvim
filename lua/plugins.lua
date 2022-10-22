@@ -34,6 +34,8 @@ packer.startup(function(use)
 
   use 'nvim-telescope/telescope.nvim' -- Fuzzy finder
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser extension for telescope
+  -- use 'nvim-telescope/telescope-media-files.nvim' -- Image previewer (only work for linux)
+
   use 'ryanoasis/vim-devicons' -- File icons
   use 'kyazdani42/nvim-web-devicons' -- File icons extend from vim-devicons
   use 'akinsho/nvim-bufferline.lua' -- Tabs bufferline
@@ -42,6 +44,7 @@ packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'tpope/vim-surround' -- Surrounding utilities for work with brackets, tags and more
+  use 'terryma/vim-multiple-cursors' -- Multiple select and edit
 
   use 'lewis6991/gitsigns.nvim' -- Fast git decorations implemented purely in lua/teal
   use 'dinhhuy258/git.nvim' -- For git blame & browser
@@ -49,5 +52,11 @@ packer.startup(function(use)
   use 'numToStr/Comment.nvim' -- Commenting with gc
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting jsx
 
-  use 'terryma/vim-multiple-cursors' -- Multiple select and edit
+  use {
+    'samodostal/image.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  } -- Image preview ascii
+  use { 'm00qek/baleia.nvim', tag = 'v1.2.0' } -- Image colorizer ascii
 end)

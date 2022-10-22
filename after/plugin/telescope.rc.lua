@@ -14,7 +14,7 @@ telescope.setup {
       n = {
         ['q'] = actions.close
       }
-    }
+    },
   },
   extensions = {
     file_browser = {
@@ -34,7 +34,7 @@ telescope.setup {
           end
         }
       }
-    }
+    },
   }
 }
 
