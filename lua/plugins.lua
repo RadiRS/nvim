@@ -60,4 +60,9 @@ packer.startup(function(use)
     },
   } -- Image preview ascii
   use { 'm00qek/baleia.nvim', tag = 'v1.2.0' } -- Image colorizer ascii
+
+  use({
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+  })
 end)
