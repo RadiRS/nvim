@@ -8,6 +8,13 @@ end
 
 local fb_actions = require 'telescope'.extensions.file_browser.actions
 
+local is_image = function(filepath)
+  local image_extensions = { "png", "jpg", "jpeg", "gif" } -- Supported image formats
+  local split_path = vim.split(filepath:lower(), ".", { plain = true })
+  local extension = split_path[#split_path]
+  return vim.tbl_contains(image_extensions, extension)
+end
+
 telescope.setup {
   defaults = {
     mappings = {
@@ -17,12 +24,6 @@ telescope.setup {
     },
     preview = {
       mime_hook = function(filepath, bufnr, opts)
-        local is_image = function(filepath)
-          local image_extensions = { "png", "jpg", "jpeg", "gif" } -- Supported image formats
-          local split_path = vim.split(filepath:lower(), ".", { plain = true })
-          local extension = split_path[#split_path]
-          return vim.tbl_contains(image_extensions, extension)
-        end
         if is_image(filepath) then
           local term = vim.api.nvim_open_term(bufnr, {})
           local function send_output(_, data, _)
