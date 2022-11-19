@@ -47,3 +47,6 @@ keymap.set('i', 'jk', '<ESC>')
 keymap.set('n', '<leader>s', ':w<Return>')
 -- Delete a word backwards
 -- keymap.set('n', 'dw', 'vb"_d')
+
+--:put => for next line and :put! for prev line
+keymap.set('n', '<C-l>', ":put =printf('console.log(''%s:'',  %s);', expand('<cword>'), expand('<cword>'))<CR>")
