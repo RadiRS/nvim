@@ -3,20 +3,13 @@ if (not status) then return end
 local statuscmp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if (not statuscmp) then return end
 
-local protocal = require('vim.lsp.protocol')
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-local on_attach = function(client, bufnr)
+local on_attach = function(client, _)
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
-    -- vim.api.nvim_create_autocmd("BufWritePre", {
-    --  group = vim.api.nvim_create_augroup("Format", { clear = true }),
-    --  buffer = bufnr,
-    --  callback = function() vim.lsp.buf.formatting_seq_sync() end
-    -- })
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd! BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
 end
