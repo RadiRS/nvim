@@ -17,6 +17,8 @@ ts.setup {
     'css',
     'yaml',
     'html',
+    'markdown',
+    'markdown_inline'
   },
   autotag = {
     enable = true
