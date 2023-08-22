@@ -5,12 +5,16 @@ if (not statuscmp) then return end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-local on_attach = function(client, _)
+local on_attach = function(client, bufnr)
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[augroup END]]
+    -- vim.api.nvim_command [[augroup Format]]
+    -- vim.api.nvim_command [[autocmd! * <buffer>]]
+    -- vim.api.nvim_command [[augroup END]]
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
   end
 end
 
@@ -29,7 +33,7 @@ nvim_lsp.eslint.setup {
 
 -- Lua
 nvim_lsp.lua_ls.setup {
-  on_attach = on_attach,
+  -- on_attach = on_attach,
   settings = {
     Lua = {
       diagnostics = {
