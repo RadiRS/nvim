@@ -1,3 +1,9 @@
 return {
-  --  TODO: setup themes
+  { "dracula/vim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "dracula",
+    },
+  },
 }
