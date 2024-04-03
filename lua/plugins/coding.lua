@@ -20,4 +20,21 @@ return {
     cmd = "IncRename",
     config = true,
   },
+
+  -- Code Screenshoot
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    opts = {
+      watermark = "",
+      bg_color = "#5e3719",
+    },
+    config = function(_, opts)
+      require("codesnap").setup(opts)
+    end,
+    init = function()
+      local wk = require("which-key")
+      wk.register({ ["<leader>cs"] = { ":CodeSnap<CR>", "SnapShoot Code" } }, { mode = "v" })
+    end,
+  },
 }
