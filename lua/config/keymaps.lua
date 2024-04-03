@@ -15,6 +15,9 @@ keymap.set("n", "dw", "vb_d")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Delete Buffer
+keymap.set("n", "<C-w>w", ":bd<CR>", opts)
+
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
