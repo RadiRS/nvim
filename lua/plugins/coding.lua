@@ -37,4 +37,9 @@ return {
       wk.register({ ["<leader>cs"] = { ":CodeSnap<CR>", "SnapShoot Code" } }, { mode = "v" })
     end,
   },
+
+  -- Find next and replace
+  {
+    "mg979/vim-visual-multi",
+  },
 }
