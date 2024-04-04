@@ -1,4 +1,15 @@
 return {
+  -- Neo-tree Config
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        position = "right",
+      },
+    },
+  },
+
+  -- Telescope Config
   {
     "telescope.nvim",
     dependencies = {
