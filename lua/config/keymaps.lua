@@ -9,14 +9,15 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
--- Delete a workd backwords
+-- Delete a work backwards
 keymap.set("n", "dw", "vb_d")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Delete Buffer
+-- Buffers
 keymap.set("n", "<C-w>w", ":bd<CR>", opts)
+keymap.set("n", "<C-w>W", "<cmd>bufdo bd<cr>", opts)
 
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
