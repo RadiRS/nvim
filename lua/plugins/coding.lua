@@ -42,4 +42,9 @@ return {
   {
     "mg979/vim-visual-multi",
   },
+
+  -- Surrounddings code
+  {
+    "tpope/vim-surround",
+  },
 }
