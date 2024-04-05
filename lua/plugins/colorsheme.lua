@@ -3,7 +3,17 @@ return {
     "lmburns/kimbox",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("kimbox")
+      require("kimbox").setup({
+        transparent = true,
+      })
     end,
+  },
+
+  -- Configure LazyVim to load kimbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kimbox",
+    },
   },
 }
