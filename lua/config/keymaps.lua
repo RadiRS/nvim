@@ -40,6 +40,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Text Editor
 keymap.set("i", "jk", "<ESC>")
+keymap.set("n", "\\s", ":w<Return>")
 
 -- Diagnotics
 keymap.set("n", "<C-j>", function()
