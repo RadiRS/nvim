@@ -43,9 +43,9 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "\\s", ":w<Return>")
 
 -- Diagnotics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<C-e>", function()
   vim.diagnostic.goto_prev()
 end, opts)
 
 -- Javascript/Typescript
-keymap.set("n", "<C-l>", ":put =printf('console.log(''%s:'',  %s);', expand('<cword>'), expand('<cword>'))<CR>")
+-- keymap.set("n", "<C-l>", ":put =printf('console.log(''%s:'',  %s);', expand('<cword>'), expand('<cword>'))<CR>")
