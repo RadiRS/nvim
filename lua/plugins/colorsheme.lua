@@ -1,19 +1,14 @@
 return {
-  {
-    "lmburns/kimbox",
-    priority = 1000,
-    config = function()
-      require("kimbox").setup({
-        transparent = true,
-      })
-    end,
-  },
+  -- install themes
+  { "lmburns/kimbox" },
+  { "savq/melange-nvim" },
+  { "danilo-augusto/vim-afterglow" },
 
   -- Configure LazyVim to load kimbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kimbox",
+      colorscheme = "afterglow",
     },
   },
 }
