@@ -18,7 +18,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.toml" },
-    -- { import = "lazyvim.plugins.extras.lang.typescript" }, -- Need to disabled because have some feature need tobe disabled
+    { import = "lazyvim.plugins.extras.lang.typescript" }, -- Need to disabled because have some feature need tobe disabled
 
     -- Formatter and linting
     { import = "lazyvim.plugins.extras.linting.eslint" },
