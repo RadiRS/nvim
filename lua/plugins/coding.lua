@@ -34,7 +34,7 @@ return {
     end,
     init = function()
       local wk = require("which-key")
-      wk.register({ ["<leader>cs"] = { ":CodeSnap<CR>", "SnapShoot Code" } }, { mode = "v" })
+      wk.add({ "<leader>cs", ":CodeSnap<CR>", desc = "SnapShoot Code", mode = "v" })
     end,
   },
 
