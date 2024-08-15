@@ -47,4 +47,9 @@ return {
   {
     "tpope/vim-surround",
   },
+
+  -- For styled components in react
+  {
+    "styled-components/vim-styled-components",
+  },
 }
