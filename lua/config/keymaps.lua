@@ -48,4 +48,4 @@ keymap.set("n", "<C-e>", function()
 end, opts)
 
 -- Javascript/Typescript
--- keymap.set("n", "<C-l>", ":put =printf('console.log(''%s:'',  %s);', expand('<cword>'), expand('<cword>'))<CR>")
+keymap.set("n", "<C-A-l>", ":put =printf('console.log(''%s:'',  %s);', expand('<cword>'), expand('<cword>'))<CR>")
