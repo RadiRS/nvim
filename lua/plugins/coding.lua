@@ -27,7 +27,7 @@ return {
     build = "make",
     opts = {
       watermark = "",
-      bg_color = "#5e3719",
+      bg_padding = 0,
     },
     config = function(_, opts)
       require("codesnap").setup(opts)
