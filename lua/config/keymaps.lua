@@ -42,7 +42,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "\\s", ":w<Return>")
 
--- Diagnotics
+-- Diagnostics
 keymap.set("n", "<C-e>", function()
   vim.diagnostic.goto_prev()
 end, opts)
