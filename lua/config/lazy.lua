@@ -11,9 +11,6 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- Editor
-    { import = "lazyvim.plugins.extras.editor.telescope" },
-
     -- import any extras modules here
     -- Lang
     { import = "lazyvim.plugins.extras.lang.json" },
