@@ -24,8 +24,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
 
     -- Formatter and linting
+    -- Formatter and Linting
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+    { import = "lazyvim.plugins.extras.formatting.biome" },
 
     -- Util and snippet
     { import = "lazyvim.plugins.extras.coding.luasnip" },
