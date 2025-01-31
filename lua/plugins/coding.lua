@@ -1,11 +1,4 @@
 return {
-  -- Incremental rename
-  -- {
-  --   "smjonas/inc-rename.nvim",
-  --   cmd = "IncRename",
-  --   config = true,
-  -- },
-
   -- Code Screenshoot
   {
     "mistricky/codesnap.nvim",
