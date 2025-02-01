@@ -35,6 +35,7 @@ require("lazy").setup({
 
     -- Util and Coding
     { import = "lazyvim.plugins.extras.coding.luasnip" },
+    { import = "lazyvim.plugins.extras.coding.neogen" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
 
     -- Test and Debugger
