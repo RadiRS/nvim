@@ -16,6 +16,7 @@ require("lazy").setup({
     -- UI and Editor
     { import = "lazyvim.plugins.extras.editor.aerial" },
     { import = "lazyvim.plugins.extras.editor.inc-rename" },
+    { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
     { import = "lazyvim.plugins.extras.ui.smear-cursor" },
 
     -- Lang
@@ -32,14 +33,13 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.formatting.biome" },
 
-    -- Util and snippet
+    -- Util and Coding
     { import = "lazyvim.plugins.extras.coding.luasnip" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-    { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 
-    -- Test and debugger
-    { import = "lazyvim.plugins.extras.dap.core" },
+    -- Test and Debugger
     { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
     { import = "lazyvim.plugins.extras.dap.core" },
 
