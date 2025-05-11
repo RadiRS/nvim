@@ -40,7 +40,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Text Editor
 keymap.set("i", "jk", "<ESC>")
-keymap.set("n", "\\s", ":w<Return>")
+keymap.set("n", "\\s", "<cmd>w<cr><esc>", { desc = "Save File" })
 
 -- Diagnostics
 keymap.set("n", "<C-e>", function()
