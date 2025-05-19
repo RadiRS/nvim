@@ -39,6 +39,12 @@ return {
   {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
+    version = "v10.3.0",
+    dependencies = {
+      -- check the installation instructions at
+      -- https://github.com/folke/snacks.nvim
+      "folke/snacks.nvim",
+    },
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
@@ -54,8 +60,6 @@ return {
         desc = "Open the file manager in nvim's working directory",
       },
       {
-        -- NOTE: this requires a version of yazi that includes
-        -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
         "<c-up>",
         "<cmd>Yazi toggle<cr>",
         desc = "Resume the last yazi session",
@@ -68,5 +72,11 @@ return {
         show_help = "<f1>",
       },
     },
+    -- 👇 if you use `open_for_directories=true`, this is recommended
+    init = function()
+      -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
+      -- vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+    end,
   },
 }
